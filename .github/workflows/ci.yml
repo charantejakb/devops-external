@@ -27,6 +27,9 @@ jobs:
 
       - name: Check Python Syntax
         run: python -m py_compile app.py
+        
+      - name: Run Automated Tests
+        run: python -m pytest -v
 
       - name: Build Docker Image
         run: docker build -t flask-app .
