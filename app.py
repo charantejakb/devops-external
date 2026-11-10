@@ -55,6 +55,10 @@ def delete_Student(id):
             return jsonify({"message":"student deleted success"}),200
     return jsonify({"error":"Student not found"}),404
 
+@app.route("/about", methods=["GET"])
+def about():
+    return "Feature branch added successfully"
+
 if __name__=="__main__":
     app.run(debug=True,port=5000)
 
